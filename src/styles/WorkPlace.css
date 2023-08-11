@@ -1,0 +1,55 @@
+.time {
+  font-size: 12px;
+}
+
+.position {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.place-position {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.place {
+  font-size: 12px;
+  font-style: italic;
+  color: #ee7968;
+}
+
+.description {
+  background-color: #efe7e4;
+  margin-bottom: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+
+.description ul {
+  padding: 25px;
+}
+
+.description.open {
+  max-height: 1000px;
+  transition: max-height 1s;
+}
+
+.disk {
+  background-color: #ee7968;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-top: 12px;
+  margin-right: 11px;
+}
+
+.description li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.text {
+  width: fit-content;
+}

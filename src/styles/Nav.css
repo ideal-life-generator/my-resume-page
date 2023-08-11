@@ -1,0 +1,18 @@
+nav {
+  position: fixed;
+    width: 200px;
+    height: 100%;
+    padding-left: 40px;
+    /* background-color: #faf2f0; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.list-menu {
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+}
