@@ -49,27 +49,27 @@ function Main() {
   const skills = [
     {
       number: 97,
-      text: "1",
+      text: "HTML",
+    },
+    {
+      number: 87,
+      text: "CSS",
     },
     {
       number: 97,
-      text: "2",
+      text: "JavaScript",
+    },
+    {
+      number: 90,
+      text: "React",
     },
     {
       number: 97,
-      text: "3",
+      text: "Node.js",
     },
     {
       number: 97,
-      text: "4",
-    },
-    {
-      number: 97,
-      text: "5",
-    },
-    {
-      number: 97,
-      text: "6",
+      text: "Handlebars",
     },
   ];
 
@@ -107,7 +107,7 @@ function Main() {
           Verity Technologies LTD as a senior Human Resources Manager and
           Digital Business Automation Specialist, with more than twenty teams in
           her official jurisdiction.
-          <img class='cat' src="src/img/cat.jpg" />
+          <img class="cat" src="src/img/cat.jpg" />
         </div>
         {expertise.map((el) => (
           <ExpertiseBlock key={el.title} {...el} />
@@ -117,9 +117,12 @@ function Main() {
       <div className="big-title" id="skills">
         Something great about myself is supposed to be here
       </div>
-      {skills.map((el) => (
-        <Skill key={el.text} {...el} />
-      ))}
+      <div className='skill-container'>
+        {skills.map((el) => (
+          <Skill key={el.text} {...el} />
+        ))}
+      </div>
+
       {languageList.map((el) => (
         <Language key={el.language} {...el} />
       ))}
