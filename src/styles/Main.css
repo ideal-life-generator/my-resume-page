@@ -32,3 +32,21 @@ img {
     padding: 50px;
 }
 
+
+.main-block-container {
+    display: flex;
+}
+
+
+.side-block {
+    /* background-color: red; */
+    padding: 0 75px;
+}
+
+.side-block-title {
+    font-weight: bold;
+}
+
+.languages {
+    display: flex;
+}

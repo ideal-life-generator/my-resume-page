@@ -4,7 +4,6 @@ import Language from "./Language";
 import GetInTouch from "./GetInTouch";
 import "../styles/Main.css";
 
-
 function Main() {
   const expertise = [
     {
@@ -85,7 +84,7 @@ function Main() {
       maxStars: 5,
     },
     {
-      language: "russia",
+      language: "russian",
       stars: 2,
       maxStars: 5,
     },
@@ -107,7 +106,7 @@ function Main() {
           Verity Technologies LTD as a senior Human Resources Manager and
           Digital Business Automation Specialist, with more than twenty teams in
           her official jurisdiction.
-          <img class="cat" src="src/img/cat.jpg" />
+          <img className="cat" src="src/img/cat.jpg" />
         </div>
         {expertise.map((el) => (
           <ExpertiseBlock key={el.title} {...el} />
@@ -117,15 +116,35 @@ function Main() {
       <div className="big-title" id="skills">
         Something great about myself is supposed to be here
       </div>
-      <div className='skill-container'>
-        {skills.map((el) => (
-          <Skill key={el.text} {...el} />
-        ))}
+      <div className="main-block-container">
+        <div className="main-block">
+          <div className="general_experience" id="expertise">
+            Experienced Recruiting Specialist with years of experience in hiring
+            process management and recruitment procedure monitoring, developer
+            of cross-company work force allocation strategies, a true team
+            leader & most importantly, a good friend. Currently working at the
+            Softworks Verity Technologies LTD as a senior Human Resources
+            Manager and Digital Business Automation Specialist, with more than
+            twenty teams in her official jurisdiction.
+          </div>
+          <div className="skill-container">
+            {skills.map((el) => (
+              <Skill key={el.text} {...el} />
+            ))}
+          </div>
+        </div>
+        <div className="side-block">
+          <div className="side-block-title">Languages I speak</div>
+          <div className="languages">
+            <ul>
+              {languageList.map((el) => (
+                <Language key={el.language} {...el} />
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
 
-      {languageList.map((el) => (
-        <Language key={el.language} {...el} />
-      ))}
       <div>
         Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
         Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
