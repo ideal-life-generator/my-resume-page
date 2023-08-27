@@ -1,0 +1,25 @@
+.get-in-touch-form > input,
+.get-in-touch-form > textarea {
+  display: inline-block;
+  position: relative;
+  width: 500px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  background-color: #f8f2f0;
+  border: 1px solid #000;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 15px;
+}
+
+.get-in-touch-form > input:focus,
+.get-in-touch-form > textarea:focus {
+  outline: none !important;
+  border: 1px solid #ee7968;
+}
+
+#get-in-touch {
+  color: #6f9389;
+  font-size: 30px;
+  margin-bottom: 20px;
+}

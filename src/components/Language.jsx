@@ -14,7 +14,8 @@ function Language(props) {
       >
         <polygon
           points="5,0 6.5,3.5 10,3.5 6.75,6.75 8.5,10 5,7.5 1.5,10 3.25,6.75 0,3.5 3.5,3.5"
-          fill="#ff9f00"
+          fill="#ee7968"
+          // stroke="#0a1a2b"
         />
       </svg>
     ) : (
@@ -27,7 +28,7 @@ function Language(props) {
       >
         <polygon
           points="5,0 6.5,3.5 10,3.5 6.75,6.75 8.5,10 5,7.5 1.5,10 3.25,6.75 0,3.5 3.5,3.5"
-          stroke="#0a1a2b"
+          stroke="#ee7968"
           fill="none"
         />
       </svg>
@@ -36,8 +37,11 @@ function Language(props) {
 
   console.log(starsList);
   return (
-    <li className='language-dot'>
-      <div>{language}</div>
+    <li className="language-skills">
+      <div className="language-name-container">
+        <div className="disk-language"></div>
+        <div className="language-name">{language}</div>
+      </div>
 
       <div>{starsList.map((el) => el)}</div>
     </li>

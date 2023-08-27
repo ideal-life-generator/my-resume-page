@@ -2,6 +2,8 @@ import ExpertiseBlock from "./ExpertiseBlock";
 import Skill from "./Skill";
 import Language from "./Language";
 import GetInTouch from "./GetInTouch";
+import ContactMe from "./ContactMe";
+import SocialMedia from "./SocialMedia";
 import "../styles/Main.css";
 
 function Main() {
@@ -145,14 +147,39 @@ function Main() {
         </div>
       </div>
 
-      <div>
+      <div className="main-block main-block-text">
         Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
         Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
         imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
         ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
         eget condimentum
       </div>
-      <GetInTouch name="name" email="email" phone="phone" message="message" />
+
+      <div className="main-block-container">
+        <div className="main-block" >
+          <GetInTouch
+            name="Name"
+            email="Email"
+            phone="Phone"
+            message="Your message..."
+          />
+        </div>
+        <div className="side-block">
+          <ContactMe
+            name="Olga Geyfman-Orlova"
+            email="olgaorlova241@gmail.com"
+            phone="+12345566"
+            address="5604 Bentwood Trail, Dallas"
+            mapLink="https://goo.gl/maps/J9b9H7GxpzwkmWMUA"
+          />
+
+          <SocialMedia
+            facebook="facebook.com"
+            codewars="https://www.codewars.com/users/888yalosinger"
+          />
+        </div>
+      </div>
+
       <footer>© 2021 Qode Interactive, All Rights Reserved</footer>
     </main>
   );

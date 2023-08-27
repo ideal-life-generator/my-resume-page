@@ -1,3 +1,23 @@
-.language-dot {
-    list-style:disc;
+.disk-language {
+  background-color: #0a1a2b;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  margin: auto 5px auto 2px;
+}
+
+.language-skills {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.language-name-container {
+  display: flex;
+}
+
+
+.language-name {
+    font-size: 12px;
 }
