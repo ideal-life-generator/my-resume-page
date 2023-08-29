@@ -155,8 +155,10 @@ function Main() {
         eget condimentum
       </div>
 
+      <h2 id="get-in-touch">Get in touch</h2>
+
       <div className="main-block-container">
-        <div className="main-block" >
+        <div className="main-block">
           <GetInTouch
             name="Name"
             email="Email"

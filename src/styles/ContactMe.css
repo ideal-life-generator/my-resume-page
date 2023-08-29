@@ -1,0 +1,25 @@
+.contact-me {
+  line-height: 1.375em;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  padding-bottom: 10px;
+  background-color: blue;
+  width: 100px;
+}
+
+.contact-me-information {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  height: 100px;
+  justify-content: space-evenly;
+  font-size: 10px;
+  background-color: red;
+}
+
+.contact-me-information > a,
+.contact-me-information > a:visited {
+  text-decoration: none;
+  color: #0a1a2b;
+  background-color: yellow;
+}

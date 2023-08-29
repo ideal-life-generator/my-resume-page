@@ -1,0 +1,36 @@
+.where-to-find {
+  line-height: 1.375em;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  padding-top: 30px;
+  background-color: blue;
+  width: 150px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 60px;
+  justify-content: space-evenly;
+  font-size: 10px;
+  background-color: red;
+}
+
+.social-media a,
+.social-media a:visited {
+  text-decoration: none;
+  color: #0a1a2b;
+}
+
+.disk-social-media {
+  background-color: #ee7968;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  margin: auto 10px auto 0;
+}
+
+.socials-disk-container {
+  display: flex;
+}

@@ -43,8 +43,7 @@ img {
 
 
 .side-block {
-    /* background-color: red; */
-    padding: 0 75px;
+    padding-left: 130px;
 }
 
 .side-block-title {
@@ -59,4 +58,9 @@ img {
 
 .languages > ul {
     width: 100%
+}
+
+footer {
+    font-style: italic;
+    font-size: 10px;
 }
