@@ -16,3 +16,10 @@ nav {
   height: 200px;
   justify-content: space-around;
 }
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+}

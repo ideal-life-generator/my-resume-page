@@ -3,7 +3,6 @@
   letter-spacing: 0.1em;
   font-size: 13px;
   padding-top: 30px;
-  background-color: blue;
   width: 150px;
 }
 
@@ -14,7 +13,6 @@
   height: 60px;
   justify-content: space-evenly;
   font-size: 10px;
-  background-color: red;
 }
 
 .social-media a,
