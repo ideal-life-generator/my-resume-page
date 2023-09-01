@@ -129,11 +129,6 @@ function Main() {
             Manager and Digital Business Automation Specialist, with more than
             twenty teams in her official jurisdiction.
           </div>
-          <div className="skill-container">
-            {skills.map((el) => (
-              <Skill key={el.text} {...el} />
-            ))}
-          </div>
         </div>
         <div className="side-block">
           <div className="side-block-title">Languages I speak</div>
@@ -145,6 +140,12 @@ function Main() {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="skill-container">
+        {skills.map((el) => (
+          <Skill key={el.text} {...el} />
+        ))}
       </div>
 
       <div className="main-block main-block-text">
@@ -176,7 +177,7 @@ function Main() {
           />
 
           <SocialMedia
-            facebook="facebook.com"
+            facebook="https://www.facebook.com"
             codewars="https://www.codewars.com/users/888yalosinger"
           />
         </div>
