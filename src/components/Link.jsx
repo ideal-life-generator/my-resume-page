@@ -1,11 +1,15 @@
 import "../styles/Link.css";
 
 function Link(props) {
-    const { href, name, className } = props;
+  const { href, name, className } = props;
   return (
-    <>
-          <a className={className} href={href}>{name}</a>
-    </>
+    <div
+      className={className ? `link-container ${className}` : "link-container"}
+    >
+      <a className={className} href={href}>
+        {name}
+      </a>
+    </div>
   );
 }
 

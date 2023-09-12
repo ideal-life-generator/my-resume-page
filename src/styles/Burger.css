@@ -1,0 +1,73 @@
+.icon-1,
+.icon-2,
+.icon-3 {
+  position: inherit;
+  /* left: 25%;
+  top: 50%; */
+  width: 20px;
+  height: 3px;
+  background-color: #6f9389;
+  transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
+}
+
+.icon-1 {
+  transform: translateY(-8px);
+  animation-delay: 100ms;
+}
+.icon-2 {
+  /* transform: translateY(8px); */
+  animation-delay: 100ms;
+}
+
+.icon-3 {
+  transform: translateY(8px);
+  animation-delay: 250ms;
+}
+
+.hamburger-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 36px;
+  width: 36px;
+  top: 10%;
+  left: 35px;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.2);
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-container {
+    position: inherit;
+    width: 20px;
+    height: 20px;
+    transform: translateY(8px);
+  }
+
+  &.open {
+    .icon-container {
+      .icon-1 {
+        transform: rotate(45deg);
+      }
+      .icon-3 {
+        transform: rotate(-45deg);
+      }
+      .icon-2 {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    right: 35px;
+    left: auto;
+  }
+}

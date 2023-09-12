@@ -1,25 +1,38 @@
 nav {
   position: fixed;
-    width: 200px;
-    height: 100%;
-    padding-left: 40px;
-    /* background-color: #faf2f0; */
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+  width: 200px;
+  height: 100%;
+  padding-left: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+  transition: left 1s;
+  left: 0;
+  &.closed {
+    left: -200px;
+    transition: left 1s;
+  }
 }
 
 .list-menu {
   /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 300px;
   justify-content: space-around;
 }
 
+.download-resume {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0a1a2b;
+}
 
 @media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
+  .menu {
+    display: none;
+  }
 }

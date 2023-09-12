@@ -1,8 +1,50 @@
 a {
-  display: block;  
+  display: block;
 }
 
 .nav-link {
   padding-top: 25px;
 }
 
+a.underline-link {
+  text-decoration: none;
+  color: #0a1a2b;
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(#e8604c 0 0);
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+  /* animation-name: hover;
+  animation-duration: 1ms;
+  animation-fill-mode: backwards;
+  animation-play-state: paused; */
+
+}
+
+a.underline-link.selected, a.underline-link:hover {
+  background-position: 100% 100%;
+  background-size: 100% 1px;
+  color: #e8604c;
+  /* animation-fill-mode: forwards;
+  animation-play-state: running; */
+}
+
+/* @keyframes hover {
+  0% {
+    
+    transform: scaleX(0.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+} */
+
+.link-container.underline-link {
+  width: fit-content;
+}
+
+a.underline-link.selected {
+  color: rgb(238, 121, 104);
+}

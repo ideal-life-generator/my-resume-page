@@ -4,6 +4,7 @@ import Language from "./Language";
 import GetInTouch from "./GetInTouch";
 import ContactMe from "./ContactMe";
 import SocialMedia from "./SocialMedia";
+import Name from "./Name";
 import "../styles/Main.css";
 
 function Main() {
@@ -94,6 +95,7 @@ function Main() {
 
   return (
     <main>
+      <Name />
       <img src="src/img/maxresdefault.jpg" />
       <div className="big-title" id="bio">
         Self-driven and proactive Recruiting Manager with a passion for creative
