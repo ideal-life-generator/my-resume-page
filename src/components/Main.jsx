@@ -96,31 +96,15 @@ function Main() {
   return (
     <main>
       <Name />
-      <img src="src/img/maxresdefault.jpg" />
-      <div className="big-title" id="bio">
-        Self-driven and proactive Recruiting Manager with a passion for creative
-        problem-solving methods.
-      </div>
-      <div className="main-block">
-        <div className="general_experience" id="expertise">
-          Experienced Recruiting Specialist with years of experience in hiring
-          process management and recruitment procedure monitoring, developer of
-          cross-company work force allocation strategies, a true team leader &
-          most importantly, a good friend. Currently working at the Softworks
-          Verity Technologies LTD as a senior Human Resources Manager and
-          Digital Business Automation Specialist, with more than twenty teams in
-          her official jurisdiction.
-          <img className="cat" src="src/img/cat.jpg" />
-        </div>
-        {expertise.map((el) => (
-          <ExpertiseBlock key={el.title} {...el} />
-        ))}
+      <div className="my-first-photo-container">
+        <div className="my-first-photo"/>
       </div>
 
-      <div className="big-title" id="skills">
-        Something great about myself is supposed to be here
-      </div>
-      <div className="main-block-container">
+      <div className="main-container">
+        <div className="big-title" id="bio">
+          Self-driven and proactive Recruiting Manager with a passion for
+          creative problem-solving methods.
+        </div>
         <div className="main-block">
           <div className="general_experience" id="expertise">
             Experienced Recruiting Specialist with years of experience in hiring
@@ -130,62 +114,82 @@ function Main() {
             Softworks Verity Technologies LTD as a senior Human Resources
             Manager and Digital Business Automation Specialist, with more than
             twenty teams in her official jurisdiction.
+            <img className="cat" src="src/img/olga-stairs-cropped.jpg" />
+          </div>
+          {expertise.map((el) => (
+            <ExpertiseBlock key={el.title} {...el} />
+          ))}
+        </div>
+
+        <div className="big-title" id="skills">
+          Something great about myself is supposed to be here
+        </div>
+        <div className="main-block-container">
+          <div className="main-block">
+            <div className="general_experience" id="expertise">
+              Experienced Recruiting Specialist with years of experience in
+              hiring process management and recruitment procedure monitoring,
+              developer of cross-company work force allocation strategies, a
+              true team leader & most importantly, a good friend. Currently
+              working at the Softworks Verity Technologies LTD as a senior Human
+              Resources Manager and Digital Business Automation Specialist, with
+              more than twenty teams in her official jurisdiction.
+            </div>
+          </div>
+          <div className="side-block">
+            <div className="side-block-title">Languages I speak</div>
+            <div className="languages">
+              <ul>
+                {languageList.map((el) => (
+                  <Language key={el.language} {...el} />
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="side-block">
-          <div className="side-block-title">Languages I speak</div>
-          <div className="languages">
-            <ul>
-              {languageList.map((el) => (
-                <Language key={el.language} {...el} />
-              ))}
-            </ul>
+
+        <div className="skill-container">
+          {skills.map((el) => (
+            <Skill key={el.text} {...el} />
+          ))}
+        </div>
+
+        <div className="main-block main-block-text">
+          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+          Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+          Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+          ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
+          tempus, tellus eget condimentum
+        </div>
+
+        <h2 id="get-in-touch">Get in touch</h2>
+
+        <div className="main-block-container">
+          <div className="main-block">
+            <GetInTouch
+              name="Name"
+              email="Email"
+              phone="Phone"
+              message="Your message..."
+            />
+          </div>
+          <div className="side-block">
+            <ContactMe
+              name="Olga Geyfman-Orlova"
+              email="olgaorlova241@gmail.com"
+              phone="+12345566"
+              address="5604 Bentwood Trail, Dallas"
+              mapLink="https://goo.gl/maps/J9b9H7GxpzwkmWMUA"
+            />
+
+            <SocialMedia
+              facebook="https://www.facebook.com"
+              codewars="https://www.codewars.com/users/888yalosinger"
+            />
           </div>
         </div>
+        <footer>© 2021 Qode Interactive, All Rights Reserved</footer>
       </div>
-
-      <div className="skill-container">
-        {skills.map((el) => (
-          <Skill key={el.text} {...el} />
-        ))}
-      </div>
-
-      <div className="main-block main-block-text">
-        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-        Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
-        imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
-        ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
-        eget condimentum
-      </div>
-
-      <h2 id="get-in-touch">Get in touch</h2>
-
-      <div className="main-block-container">
-        <div className="main-block">
-          <GetInTouch
-            name="Name"
-            email="Email"
-            phone="Phone"
-            message="Your message..."
-          />
-        </div>
-        <div className="side-block">
-          <ContactMe
-            name="Olga Geyfman-Orlova"
-            email="olgaorlova241@gmail.com"
-            phone="+12345566"
-            address="5604 Bentwood Trail, Dallas"
-            mapLink="https://goo.gl/maps/J9b9H7GxpzwkmWMUA"
-          />
-
-          <SocialMedia
-            facebook="https://www.facebook.com"
-            codewars="https://www.codewars.com/users/888yalosinger"
-          />
-        </div>
-      </div>
-
-      <footer>© 2021 Qode Interactive, All Rights Reserved</footer>
     </main>
   );
 }

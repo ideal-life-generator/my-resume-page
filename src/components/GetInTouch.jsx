@@ -1,4 +1,7 @@
 import "../styles/GetInTouch.css";
+import { BsPerson } from "react-icons/bs";
+import { TfiEmail } from "react-icons/tfi"
+import {TiPhoneOutline} from "react-icons/ti"
 
 
 function GetInTouch(props) {
@@ -6,9 +9,21 @@ function GetInTouch(props) {
   return (
     <>
       <form className="get-in-touch-form">
-        <input className="name" placeholder={name} type="text" />
-        <input className="email" placeholder={email} type="email" />
-        <input className="phone" placeholder={phone} type="text" />
+        <div className="form-icon-container">
+          <input className="name" placeholder={name} type="text" />
+          <BsPerson className="form-icon" />
+        </div>
+
+        <div className="form-icon-container">
+          <input className="email" placeholder={email} type="email" />
+          <TfiEmail className="form-icon" />
+        </div>
+
+        <div className="form-icon-container">
+          <input className="phone" placeholder={phone} type="text" />
+          <TiPhoneOutline className="form-icon" />
+        </div>
+
         <textarea className="message" placeholder={message} />
         <button className="submit-button">Submit</button>
       </form>

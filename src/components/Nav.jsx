@@ -1,5 +1,6 @@
 import Link from "./Link";
 import Burger from "./Burger";
+import { useDetectClickOutside } from "react-detect-click-outside";
 import "../styles/Nav.css";
 import { useEffect, useState } from "react";
 
@@ -9,9 +10,16 @@ function Nav() {
     setIsOpen(!isOpen);
   };
 
+  const close = () => {
+    setIsOpen(false);
+  }
+
+  const navContainerRef = useDetectClickOutside({ onTriggered: close });
+  
+
   const [scrolledToElement, setScrolledToElement] = useState("");
   const onScrollHandler = (event) => {
-    let elemendID = "";
+    let elementID = "";
 
     const offsetBio = document.getElementById("bio").offsetTop;
     const offsetExpertise = document.getElementById("expertise").offsetTop;
@@ -22,24 +30,28 @@ function Nav() {
     const position = event.target.documentElement.scrollTop;
 
     if (position >= offsetBio - 1) {
-      elemendID = "bio";
+      elementID = "bio";
     }
 
     if (position >= offsetExpertise - 1) {
-      elemendID = "expertise";
+      elementID = "expertise";
     }
 
     if (position >= offsetSkills - 1) {
-      elemendID = "skills";
+      elementID = "skills";
     }
 
     if (position >= offsetTopGetInTouch - 1) {
-      elemendID = "get-in-touch";
+      elementID = "get-in-touch";
     }
     // console.log(offsetSkills);
     // console.log(position);
-    setScrolledToElement(elemendID);
+    setScrolledToElement(elementID);
   };
+
+  const scrollToTheTop = () => {
+    scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   useEffect(() => {
     document.addEventListener("scroll", onScrollHandler);
@@ -48,7 +60,7 @@ function Nav() {
     };
   });
   return (
-    <>
+    <div ref={navContainerRef}>
       <Burger toggleOpen={toggleOpen} isOpen={isOpen} />
       <nav className={isOpen ? "menu" : "menu closed"}>
         <div className="list-menu">
@@ -92,7 +104,10 @@ function Nav() {
         </div>
         <Link href="#" name="Download my resume" className="download-resume" />
       </nav>
-    </>
+      <div className={scrolledToElement === "" ? "arrow-up" : "arrow-up show"} onClick={scrollToTheTop}>
+        <div></div>
+      </div>
+    </div>
   );
 }
 

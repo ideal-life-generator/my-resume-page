@@ -1,6 +1,6 @@
 nav {
   position: fixed;
-  width: 200px;
+  width: 180px;
   height: 100%;
   padding-left: 40px;
   display: flex;
@@ -10,6 +10,8 @@ nav {
   font-weight: 600;
   transition: left 1s;
   left: 0;
+  background-color: #f7f2f0;
+  z-index: 1;
   &.closed {
     left: -200px;
     transition: left 1s;
@@ -31,8 +33,47 @@ nav {
   color: #0a1a2b;
 }
 
+.arrow-up {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8604c;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  z-index: 1;
+  cursor: pointer;
+  &.show {
+    display: flex;
+  }
+}
+
+.arrow-up > div {
+  border: 2px solid #f7f2f0;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-45deg);
+  border-left: none;
+  border-bottom: none;
+  margin-top: 5px;
+  
+}
+
 @media (max-width: 768px) {
   .menu {
-    display: none;
+    /* display: none; */
+  }
+  nav {
+    left: auto;
+    right: 0;
+    transition: right 1s;
+    &.closed {
+      right: -280px;
+      transition: right 1s;
+      left: auto;
+    }
   }
 }

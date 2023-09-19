@@ -5,6 +5,7 @@
 .position {
   font-size: 13px;
   font-weight: bold;
+  line-height: 40px;
 }
 
 .place-position {
@@ -52,4 +53,20 @@
 
 .text {
   width: fit-content;
+}
+
+.open-close-animation-container {
+  display: flex;
+  justify-content: space-between;
+  /* cursor: pointer; */
+  & > svg {
+    fill: #6f9389;
+    &.closed-eye {
+      opacity: 0.7;
+    }
+  }
+}
+
+.click-area {
+  cursor: pointer;
 }

@@ -67,7 +67,9 @@
 
 @media (max-width: 768px) {
   .hamburger-icon {
+    /* position: fixed; */
     right: 35px;
     left: auto;
+    
   }
 }
