@@ -57,3 +57,21 @@
 .get-in-touch-form > div:focus-within > svg {
   fill: #ee7968;
 }
+
+@media (max-width: 768px) {
+  .get-in-touch-form input,
+  .get-in-touch-form textarea {
+    min-width: auto;
+    width: 450px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .get-in-touch-form input,
+  .get-in-touch-form textarea {
+    min-width: auto;
+    width: 470px;
+  }
+}
+

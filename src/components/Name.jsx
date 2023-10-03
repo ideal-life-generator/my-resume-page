@@ -2,7 +2,7 @@ import "../styles/Name.css";
 
 function Name() {
   return (
-    <div className="names-container">
+    <div className="names-container noselect">
       <div className="left-name-container ">
         <div className="animated-name-left">Olga</div>
       </div>

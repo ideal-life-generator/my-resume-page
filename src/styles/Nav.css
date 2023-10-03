@@ -1,6 +1,6 @@
-nav {
+.menu {
   position: fixed;
-  width: 180px;
+  width: 240px;
   height: 100%;
   padding-left: 40px;
   display: flex;
@@ -11,9 +11,9 @@ nav {
   transition: left 1s;
   left: 0;
   background-color: #f7f2f0;
-  z-index: 1;
+  z-index: 2;
   &.closed {
-    left: -200px;
+    left: -180px;
     transition: left 1s;
   }
 }
@@ -63,10 +63,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+  /* .menu {
+    display: none;
+  } */
   .menu {
-    /* display: none; */
-  }
-  nav {
     left: auto;
     right: 0;
     transition: right 1s;
@@ -75,5 +75,12 @@ nav {
       transition: right 1s;
       left: auto;
     }
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .menu {
+    width: 160px
   }
 }

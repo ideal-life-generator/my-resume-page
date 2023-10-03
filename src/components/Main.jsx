@@ -97,7 +97,7 @@ function Main() {
     <main>
       <Name />
       <div className="my-first-photo-container">
-        <div className="my-first-photo"/>
+        <img src="src/img/DM4A0673-Edit.png" className="my-first-photo" />
       </div>
 
       <div className="main-container">

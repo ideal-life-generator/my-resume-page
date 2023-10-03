@@ -8,28 +8,59 @@ img {
   width: 100%;
 }
 
-.my-first-photo-container {
+.my-first-photo-container,
+.left-strip-container {
   height: 100vh;
   width: 100%;
 }
 
+.my-first-photo-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  /* align-items: center; */
+  background-color: #6f9389;
+}
+
 .my-first-photo {
-  background-image: url("src/img/olga-gazebo-cropped.jpg");
-  width: 100%;
+  background-color: red;
+  width: auto;
   height: 100vh;
-  background-size: cover;
-  /* background-position: center; */
+}
+
+.left-strip-container {
+  position: absolute;
+  overflow: hidden;
+  /* z-index: 10; */
+  top: 0;
+}
+
+.left-strip {
+  position: relative;
+  background-color: #6f9389;
+  height: 100vh;
+  width: 130px;
+  opacity: 0.7;
+  left: -130px;
+  animation: instant-left-strip-animaiton 2s forwards;
+}
+
+@keyframes instant-left-strip-animaiton {
+  to {
+    transform: translateX(130px);
+  }
 }
 
 .big-title {
   font-size: 40px;
   padding: 50px 0 50px 0;
   line-height: 1.2;
-  max-width: 600px;
+  max-width: 90%;
 }
 
 .main-block {
-  width: 500px;
+  min-width: 500px;
+  width: 60%;
   line-height: 1.75;
 }
 
@@ -82,10 +113,27 @@ footer {
     position: static;
     width: 100%;
   }
+  
+
+}
+
+@media (max-width: 1000px) {
+  main {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  footer {
+    padding: 60px 0 30px 0;
+  }
+
+  .languages {
+    width: 180px;
+  }
   .main-block-container {
     flex-direction: column;
   }
-  .side-block {
+   .side-block {
     padding: 0;
   }
 
@@ -95,9 +143,5 @@ footer {
 
   .main-container {
     padding-left: 40px;
-  }
-
-  footer {
-    padding: 60px 0 30px 0;
   }
 }
