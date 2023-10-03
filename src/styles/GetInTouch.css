@@ -1,6 +1,6 @@
 .get-in-touch-form input,
 .get-in-touch-form textarea {
-  display: inline-block;
+  display: block;
   position: relative;
   min-width: 500px;
   width: 500px;
@@ -19,11 +19,6 @@
   border: 1px solid #ee7968;
 }
 
-#get-in-touch {
-  color: #6f9389;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
 
 .get-in-touch-form textarea {
   min-width: 500px;

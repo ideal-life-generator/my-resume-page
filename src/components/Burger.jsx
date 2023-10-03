@@ -1,12 +1,15 @@
-
 import "../styles/Burger.css";
+import classNames from "classnames";
 
-function Burger(props) {
-    const { isOpen, toggleOpen } = props;
-
+function Burger({ isOpen, toggleOpen }) {
   return (
     <div
-      className={isOpen ? "open hamburger-icon" : "hamburger-icon"}
+      //className={isOpen ? "open hamburger-icon" : "hamburger-icon"}
+      // className={classNames("hamburger-icon", {"open": isOpen} )}
+      className={classNames({
+        open: isOpen,
+        "hamburger-icon": true,
+      })}
       onClick={toggleOpen}
     >
       <div className="icon-container">

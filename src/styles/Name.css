@@ -2,10 +2,10 @@
   position: absolute;
   font-size: 100px;
   width: 100px;
-  height: 300px;
+  /* height: 300px; */
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  top: 150px;
+  /* top: 150px; */
 }
 
 .left-name-container,
@@ -17,12 +17,18 @@
 }
 
 .left-name-container {
+  display: flex;
+  justify-content: center;
   left: 0;
+  height: 100vh;
   z-index: 2;
   color: #f8f2f0;
 }
 
 .right-name-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
   z-index: 2;
   right: 0;
   color: #6f9389;
@@ -39,7 +45,6 @@
   left: 100px;
   animation: instant-animation-right 2s forwards;
 }
-
 
 @keyframes instant-animation-left {
   to {

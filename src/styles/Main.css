@@ -23,7 +23,6 @@ img {
 }
 
 .my-first-photo {
-  background-color: red;
   width: auto;
   height: 100vh;
 }
@@ -100,6 +99,12 @@ img {
 
 .languages > ul {
   width: 100%;
+}
+
+#get-in-touch {
+  color: #6f9389;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 footer {
