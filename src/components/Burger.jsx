@@ -4,11 +4,9 @@ import classNames from "classnames";
 function Burger({ isOpen, toggleOpen }) {
   return (
     <div
-      //className={isOpen ? "open hamburger-icon" : "hamburger-icon"}
-      // className={classNames("hamburger-icon", {"open": isOpen} )}
       className={classNames({
         open: isOpen,
-        "hamburger-icon": true,
+        "hamburger-icon": true
       })}
       onClick={toggleOpen}
     >
