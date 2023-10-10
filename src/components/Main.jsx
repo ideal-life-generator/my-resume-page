@@ -6,6 +6,8 @@ import ContactMe from "./ContactMe";
 import SocialMedia from "./SocialMedia";
 import Name from "./Name";
 import "../styles/Main.css";
+import mainPhoto from "../img/DM4A0673-Edit.png";
+import stairsPhoto from "../img/olga-stairs-cropped.jpg";
 
 function Main() {
   const expertise = [
@@ -97,7 +99,7 @@ function Main() {
     <main>
       <Name />
       <div className="my-first-photo-container">
-        <img src="src/img/DM4A0673-Edit.png" className="my-first-photo" />
+        <img src={mainPhoto} className="my-first-photo" />
       </div>
 
       <div className="main-container">
@@ -114,7 +116,7 @@ function Main() {
             Softworks Verity Technologies LTD as a senior Human Resources
             Manager and Digital Business Automation Specialist, with more than
             twenty teams in her official jurisdiction.
-            <img className="cat" src="src/img/olga-stairs-cropped.jpg" />
+            <img className="cat" src={stairsPhoto} />
           </div>
           {expertise.map((el) => (
             <ExpertiseBlock key={el.title} {...el} />
