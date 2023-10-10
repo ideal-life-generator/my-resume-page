@@ -2,7 +2,7 @@ import "../styles/Header.css";
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <div className="header-name">LET'S WORK TOGETHER</div>
       <div className="contacts">
         <div>I'm available at</div>

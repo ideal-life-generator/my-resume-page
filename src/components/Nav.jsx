@@ -102,9 +102,17 @@ function Nav() {
           />
           {/* <Link className="underline-link" href="#" name="PROJECTS" /> */}
         </div>
-        <Link href="#" name="Download my resume" className="download-resume" />
+        <Link
+          href="../Resume.pdf"
+          download
+          name="Download my resume"
+          className="download-resume"
+        />
       </nav>
-      <div className={scrolledToElement === "" ? "arrow-up" : "arrow-up show"} onClick={scrollToTheTop}>
+      <div
+        className={scrolledToElement === "" ? "arrow-up" : "arrow-up show"}
+        onClick={scrollToTheTop}
+      >
         <div></div>
       </div>
     </div>
