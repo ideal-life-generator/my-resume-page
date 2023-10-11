@@ -190,7 +190,7 @@ function Main() {
             />
           </div>
         </div>
-        <footer>© 2021 Qode Interactive, All Rights Reserved</footer>
+        <footer className='footer'>© 2021 Qode Interactive, All Rights Reserved</footer>
       </div>
     </main>
   );
