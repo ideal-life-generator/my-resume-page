@@ -35,7 +35,7 @@ function Language(props) {
     )
   );
 
-  console.log(starsList);
+  // console.log(starsList);
   return (
     <li className="language-skills">
       <div className="language-name-container">
