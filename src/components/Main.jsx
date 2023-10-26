@@ -175,6 +175,7 @@ function Main() {
               message="Your message..."
             />
           </div>
+
           <div className="side-block">
             <ContactMe
               name="Olga Geyfman-Orlova"
@@ -190,7 +191,9 @@ function Main() {
             />
           </div>
         </div>
-        <footer className='footer'>© 2021 Qode Interactive, All Rights Reserved</footer>
+        <footer className="footer">
+          © 2021 Qode Interactive, All Rights Reserved
+        </footer>
       </div>
     </main>
   );

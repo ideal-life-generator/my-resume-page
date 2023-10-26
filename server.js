@@ -21,6 +21,8 @@ const FRUITS = [
   { name: "orange", price: "$1" },
 ];
 
+const FORMS = [];
+
 http
   .createServer((request, response) => {
     // request.method = GET, POST, PUT, PATCH, and DELETE
@@ -61,6 +63,40 @@ http
 
         response.end(JSON.stringify(FRUITS));
       });
+
+      return;
+    }
+
+    if (request.url === "/form" && request.method === "POST") {
+      console.log("/form - POST");
+
+      let payload = "";
+
+      request.on("data", (chunk) => {
+        payload += chunk;
+      });
+
+      request.on("end", () => {
+        const newForm = JSON.parse(payload);
+
+        console.log(newForm);
+
+        FORMS.push(newForm);
+
+        response.writeHead(200);
+
+        response.end(payload);
+      });
+
+      return;
+    }
+
+    if (request.url === "/forms" && request.method === "GET") {
+      console.log("/forms - GET");
+
+      response.writeHead(200);
+
+      response.end(JSON.stringify(FORMS));
 
       return;
     }
