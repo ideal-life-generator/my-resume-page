@@ -1,6 +1,6 @@
-//import('node:https');
-// import("node:fs");
 import http from "http";
+import express from "express";
+import cors from "cors";
 
 const USERS = [
   {
@@ -23,8 +23,50 @@ const FRUITS = [
 
 const FORMS = [];
 
+const app = express();
+
+app.use(express.json());
+
+// app.use((request, response) => {
+//   let body = "";
+
+//   request.on("data", (chunk) => {
+//     body += chunk;
+//   });
+
+//   request.on("end", () => {
+//     request.body = JSON.parse(body);
+//   });
+// }); === +/- app.use(express.json());
+
+app.use(cors());
+
+app.get("/users", (_request, response) => {
+  response.send(USERS);
+});
+
+app.get("/fruits", (_request, response) => {
+  response.send(FRUITS);
+});
+
+app.post("/fruits", (request, response) => {
+  console.log("/fruits POST", request.body);
+});
+
+app.post("/form", (request, response) => {
+  console.log("form POST", request.body);
+
+  FORMS.push(request.body);
+
+  response.send(request.body);
+});
+
+app.listen(8000);
+
 http
   .createServer((request, response) => {
+    console.log("app.use I'm in 'use'", request, response);
+
     // request.method = GET, POST, PUT, PATCH, and DELETE
     // More information - https://nodejs.org/docs/latest-v16.x/api/http.html#httprequestoptions-callback
 
@@ -115,4 +157,4 @@ http
 
     response.end("site");
   })
-  .listen(8000);
+  .listen(8001);
